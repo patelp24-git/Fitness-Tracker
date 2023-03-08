@@ -1,0 +1,34 @@
+-----------Testing delete table from DB, retruns empty string on success-------------
+TestReadFromKey 1, checking for existing table and existing row: some name
+TestReadFromKey 2, checking for non-existing table and an existing row: The table Table68 does not exist. Please check the name and try again
+TestReadFromKey 1, checking for existing table and non-existing row: The key yay does not exist. Please check the key name and try again
+
+
+-----------Testing read from table row from DB, retruns a success string or a failure string-------------
+TestDeleteTable 1, checking for existing tables: 
+TestDeleteTable 2, checking for an already deleted table: Table Table30 does not exist. Please check the table name and try again
+TestDeleteTable 3, checking for non-existent tables: Table Table34 does not exist. Please check the table name and try again
+
+
+-----------Testing read from table from DB, retruns a list on success and a string on failure-------------
+TestDeleteValue 1, checking for an existing table and existing data set: 
+TestDeleteValue 2, checking for an non-existing table and existing data set: The table Table49 does not exist please check the table name and try again
+TestDeleteValue 3, checking for an existing table and an already deleted data set: The row for the key name does not exist. Please check the key name and try again
+TestDeleteValue 4, checking for an existing table and non-existing data set: The row for the key yepee does not exist. Please check the key name and try again
+
+
+-----------Testing create table, retruns empty string on success-------------
+TestCreateTable 1 : 
+TestCreateTable 2 : 
+TestCreateTable 3 : Table name Table1 already exists please choose another name
+
+
+-----------Testing add element to table, retruns empty string on success-------------
+TestReadFromTable 1, reading from an existing table: [name: some name, steps: 2000, value: some value]
+TestReadFromTable 2, reading from an non-existing table: The table Table880 does not exist. Please check the name and try again
+
+
+-----------Testing delete table row from DB, retruns empty string on success-------------
+TestAddElementToTable 1, checking for existing tables: 
+TestAddElementToTable 2, checking for non-existent tables: No table of the name Table24 exists. Please enter an existing table. Thank you
+TestAddElementToTable 3, checking for several entries to the same table: 

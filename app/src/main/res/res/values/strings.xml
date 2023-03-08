@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Fitness Companion</string>
+    <string name="stepNumber">0</string>
+    <string name="start_counting">Start Counting</string>
+    <string name="stop_counting">Stop Counting</string>
+    <string name="passwordInfo">
+        <br>password should contain: \n</br>
+        <br>-at least 1 digit. \n</br>
+        <br>-no spaces \n</br>
+        <br>-at least 1 special character(&amp;@#$%+=) \n</br>
+        <br>-at least 1 lower case letter:[a-z] \n</br>
+        <br>-at least 1 upper case letter:[A-Z] \n</br>
+        <br>-should be between 8 and 10 letters. \n</br>
+    </string>
+    <string name="bmiInfo">
+        <br>
+            Body Mass Index (BMI) is a person’s weight in kilograms divided by the square of height in meters.
+        A high BMI can be an indicator of high body fatness. BMI can be used to screen for weight categories that
+            may lead to health problems but it is not diagnostic of the body fatness or health of an individual.
+            <br/>
+        </br>
+        <br>
+            Body mass index (BMI) is a person’s weight in kilograms divided by the square of height in meters.
+            BMI is an inexpensive and easy screening method for weight category—underweight, healthy weight, overweight, and obesity.
+            <br/>
+        </br>
+        <br>
+            BMI does not measure body fat directly, but BMI is moderately correlated with more direct measures of body fat.
+            Furthermore, BMI appears to be as strongly correlated with various metabolic and disease outcome as are these more direct measures of body fatness.
+        </br>
+    </string>
+</resources>

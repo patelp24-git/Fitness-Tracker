@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_default"
+    tools:context=".presentation.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="20dp"
+            android:id="@+id/barbell"
+            android:src="@mipmap/barbell"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/app_name"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/black"
+            android:fontFamily="monospace"
+            />
+    </LinearLayout>
+
+
+    <EditText
+        android:hint="Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/black"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/edtTxtEmail"
+        />
+
+    <EditText
+        android:hint="Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:inputType="textPassword"
+        android:layout_below="@+id/edtTxtEmail"
+        android:id="@+id/edtTxtPassword"
+        />
+
+        <Button
+            android:id="@+id/signIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/edtTxtPassword"
+            android:layout_margin="15dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="monospace"
+            android:background="@drawable/reg_buttons"
+            android:text="Sign in"
+            />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/signIn"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/textNotUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_below="@id/signIn"
+            android:text="Not a user?   "
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"/>
+
+
+        <Button
+            android:id="@+id/registerBttn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signIn"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:background="@drawable/reg_buttons"
+            android:layout_toRightOf="@+id/textNotUser"
+            android:text="Register" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

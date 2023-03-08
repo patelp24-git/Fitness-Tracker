@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_default"
+    tools:context=".presentation.BmiCalculator">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="20dp"
+            android:id="@+id/barbell"
+            android:src="@mipmap/bmi"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="BMI Calculator"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:textColor="@color/black"
+            android:fontFamily="monospace"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/bmiInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bmiInfo"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:textStyle="italic"
+            android:fontFamily="monospace"
+            />
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/bmiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reg_buttons"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:text="BMI Calculator"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="20dp"
+            >
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/currentBMI"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="result"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:id="@+id/bmiHeight"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Height (cm):"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_weight="0.50"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:hint="150"
+                android:inputType="number"
+                android:id="@+id/regHeight"
+                android:layout_weight=".50"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bmiWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="weight (KG):"
+                android:layout_weight=".50"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.50"
+                android:inputType="number"
+                android:id="@+id/regWeight"
+                android:hint="62"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bmiCalcButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reg_buttons"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:fontFamily="monospace"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:text="Calculate BMI"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <LinearLayout
+            android:id="@+id/bmiTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            >
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TableRow
+                    android:background="@drawable/table_view"
+                    >
+
+                    <TextView
+                        android:background="@drawable/table_view"
+                        android:textStyle="bold"
+                        android:fontFamily="monospace"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:textSize="20dp"
+                        android:text="BMI" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:fontFamily="monospace"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:text="Weight Status" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/table_view"
+                    >
+
+                    <TextView
+                        android:fontFamily="monospace"
+                        android:text="Below 18.5"
+                        android:padding="10dp"
+                        android:textSize="20dp"
+                        android:background="@drawable/table_view"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:fontFamily="monospace"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="Underweight"
+                        android:padding="10dp"
+                        android:textSize="20dp" />
+                </TableRow>
+                <TableRow
+                    android:background="@drawable/table_view">
+
+                    <TextView
+                        android:fontFamily="monospace"
+                        android:text="18.5 - 24.9"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:background="@drawable/table_view"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:fontFamily="monospace"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="Normal"
+                        android:padding="10dp"
+                        android:textSize="20dp" />
+                </TableRow>
+                <TableRow
+                    android:background="@drawable/table_view">
+
+                    <TextView
+                        android:fontFamily="monospace"
+                        android:textColor="@color/black"
+                        android:text="25.0 - 29.9"
+                        android:padding="10dp"
+                        android:background="@drawable/table_view"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:fontFamily="monospace"
+                        android:textColor="@color/black"
+                        android:padding="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="Overweight"
+                        android:textSize="20dp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:background="@drawable/table_view"
+                    >
+
+                    <TextView
+                        android:fontFamily="monospace"
+                        android:textColor="@color/black"
+                        android:text="Above 29.9"
+                        android:padding="10dp"
+                        android:background="@drawable/table_view"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:fontFamily="monospace"
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:text="Obese"
+                        android:padding="10dp"
+                        android:textSize="20dp"
+                        />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
